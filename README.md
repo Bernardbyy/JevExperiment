@@ -2,12 +2,20 @@
 
 Tests **Jev** — TypeSafe's decision model — against three small LLMs at one job: acting as the input guardrail for an online shop's support chatbot, deciding which customer messages the bot should answer.
 
+[![Jev vs LLMs — 23-second findings video (click to play)](results/2026-09-22-1724/JevExperiment.jpg)](results/2026-09-22-1724/JevExperiment.mp4)
+
 | | |
 |---|---|
 | **Models** | Jev 1.13 · Claude Haiku 4.5 · Gemini 3.5 Flash-Lite · GPT-5.6 Luna |
 | **Per message** | pass or block · one of 10 categories · tone from 1 to 5 |
 | **Dataset** | 100 hand-labelled customer messages in Malaysian English |
 | **Measures** | correctness · latency · cost |
+
+**Results from the latest full run** (100 messages, [full results](results/2026-09-22-1724/)):
+
+![Accuracy](results/2026-09-22-1724/slides/slide-6-accuracy.png)
+![Latency](results/2026-09-22-1724/slides/slide-7-latency.png)
+![Cost](results/2026-09-22-1724/slides/slide-8-cost.png)
 
 **One command runs it: `python core/benchmark.py --sample`** — about 5 minutes and 7 cents.
 
