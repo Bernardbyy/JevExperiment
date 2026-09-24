@@ -509,7 +509,7 @@ def main():
     elif a.smoke:
         smoke(rows()[a.row - 1])
     else:
-        p.error("pass --dry-run, --smoke, --sample or --run")
+        p.error("pass --dry-run, --smoke, --sample, --holdout, --run or --backfill")
 
 
 if __name__ == "__main__":
