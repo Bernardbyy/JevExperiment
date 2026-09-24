@@ -11,7 +11,7 @@ https://github.com/user-attachments/assets/cfe0c733-e227-4b16-8601-3a1467692b7b
 | **Dataset** | 100 hand-labelled customer messages in Malaysian English |
 | **Measures** | correctness · latency · cost |
 
-**Results from the latest full run** (100 messages, [full results](results/2026-09-22-1724/)):
+**Results from the latest full run** (100 messages, [full results](results/2026-09-22-1724/) · [download the slides (.pptx)](https://github.com/Bernardbyy/JevExperiment/raw/main/results/2026-09-22-1724/JevExperiment.pptx)):
 
 ![Accuracy](results/2026-09-22-1724/slides/slide-6-accuracy.png)
 ![Latency](results/2026-09-22-1724/slides/slide-7-latency.png)
