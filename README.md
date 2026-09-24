@@ -53,7 +53,13 @@ Running models costs money; rebuilding a report from saved results is free.
 <details>
 <summary>How do I run an evaluation?</summary>
 
-Set up `.env` first (last section below).
+Needs Python 3.10+ and one package:
+
+```bash
+pip install matplotlib
+```
+
+Then set up `.env` (last section below).
 
 | Command | Rows | Cost | Time | Writes to |
 |---|---|---|---|---|
@@ -99,7 +105,7 @@ python core/evaluate.py --smoke  --row 3     # one row through all four models
 | `--dry-run` | print the exact request payloads, call nothing |
 | `--row N` | which row `--smoke` / `--dry-run` use (1-indexed) |
 | `--limit N` | only the first N rows — cheap test of the full pipeline |
-| `--backfill results/<stamp>` | add `provider_latency` to a run made before it existed. Free. Models that went direct on old runs (Luna; Gemini before 21 Sep 19:19) stay blank. |
+| `--backfill results/<stamp>` | add `provider_latency` to a run made before it existed. Free. |
 
 **`core/report.py`** — builds `summary.md` and charts from saved results. Free.
 
@@ -133,9 +139,6 @@ Jev/
 ├── utils/
 │   ├── build_dataset.py  source of truth for the 100 labelled messages
 │   └── dataset-spec.md   why the dataset is designed the way it is
-├── docs/
-│   ├── jev.md            background on Jev: what it is, pricing, claims
-│   └── TODO.md           open work
 ├── results/              one folder per run (gitignored)
 ├── guardrail.csv         the dataset - generated, don't edit by hand
 └── .env.example          template for .env
@@ -180,6 +183,6 @@ OPENROUTER_API_KEY=     # openrouter.ai/keys
 JEV_NOUL_THRESHOLD=0.8
 ```
 
-Jev's pass probability at or above this passes; below it blocks. 0.8 was tuned on the `--sample` rows and confirmed on the `--holdout` rows. Raise it to block more (safer, but refuses more real customers); lower it to pass more.
+Jev's pass probability at or above this passes; below it blocks. 0.8 was chosen from early trial runs. Raise it to block more (safer, but refuses more real customers); lower it to pass more.
 
 </details>
