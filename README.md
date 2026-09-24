@@ -2,7 +2,7 @@
 
 Tests **Jev** — TypeSafe's decision model — against three small LLMs at one job: acting as the input guardrail for an online shop's support chatbot, deciding which customer messages the bot should answer.
 
-[![Jev vs LLMs — 23-second findings video (click to play)](results/2026-09-22-1724/JevExperiment.jpg)](results/2026-09-22-1724/JevExperiment.mp4)
+https://github.com/user-attachments/assets/cfe0c733-e227-4b16-8601-3a1467692b7b
 
 | | |
 |---|---|
