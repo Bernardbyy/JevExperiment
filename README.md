@@ -139,7 +139,7 @@ Jev/
 ├── utils/
 │   ├── build_dataset.py  source of truth for the 100 labelled messages
 │   └── dataset-spec.md   why the dataset is designed the way it is
-├── results/              one folder per run (gitignored)
+├── results/              one folder per run (only the latest full run is tracked)
 ├── guardrail.csv         the dataset - generated, don't edit by hand
 └── .env.example          template for .env
 ```

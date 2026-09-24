@@ -1,0 +1,45 @@
+{
+  "run": "2026-09-22-1724",
+  "subset": false,
+  "split": "full",
+  "rows": 100,
+  "jev_label": "jev",
+  "jev_noul_threshold": 0.8,
+  "models": {
+    "jev": "typesafe/jev-1.13",
+    "haiku": "anthropic/claude-haiku-4.5",
+    "gemini": "google/gemini-3.5-flash-lite",
+    "luna": "openai/gpt-5.6-luna"
+  },
+  "vendors": {
+    "jev": "TypeSafe",
+    "haiku": "Anthropic",
+    "gemini": "Google",
+    "luna": "OpenAI"
+  },
+  "upstream_providers": {
+    "jev": "TypeSafe",
+    "haiku": "Amazon Bedrock",
+    "gemini": "Google",
+    "luna": "OpenAI"
+  },
+  "cost_source": "reported by OpenRouter for every model",
+  "notes": [
+    "provider_latency is the provider's time to produce the full answer, from OpenRouter's generation record: generation_time for streamed calls, latency for non-streamed (Jev). round_trip_latency is our stopwatch.",
+    "All four models go through OpenRouter.",
+    "No sampling parameters are set - every model runs at vendor defaults, so none is guaranteed deterministic."
+  ],
+  "retried": {
+    "jev": 0,
+    "haiku": 0,
+    "gemini": 0,
+    "luna": 0
+  },
+  "provider_latency_missing": {
+    "jev": 0,
+    "haiku": 0,
+    "gemini": 0,
+    "luna": 0
+  },
+  "errors": []
+}
